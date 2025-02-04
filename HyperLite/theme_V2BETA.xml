@@ -1,0 +1,503 @@
+<!--
+theme name:     HyperLite, a Hypermax port for RCADE
+creator:		Unreal2020 - but all credits go to the creators of Hypermax theme AND all art creators!
+version:        2.0BETA for ALU (all versions) with reduced/optimized images for ALU stock hardware or similar devices with RK3328
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+   <formatVersion>4</formatVersion>
+
+<!--
+variables
+-->  
+   
+   
+	<view name="grid, system, basic, detailed, video">
+		<image name="logo">
+			<path>./${system.theme}/_inc/system.png</path>
+		</image>
+	</view>
+
+<!--
+System-Carousel and main system graphics
+-->
+
+
+<feature supported="carousel">
+   <view name="system">
+      <carousel name="systemcarousel">
+        <zIndex>43</zIndex>	      
+        <type>vertical_wheel</type>
+        <pos>0.37 0.0</pos>
+        <size>1 1</size>
+        <logoScale>1.3</logoScale>
+        <logoSize>0.15 0.2</logoSize>
+        <color>00000000</color>
+        <maxLogoCount>12</maxLogoCount>
+        <logoRotation>-11</logoRotation>
+		<logoRotationOrigin>2.9 0.5</logoRotationOrigin>
+		<logoAlignment>center</logoAlignment>   
+		<scrollSound>./_inc/sound/cursor.wav</scrollSound>		
+      </carousel>
+      <image name="background" extra="true">
+         <origin>0 0</origin>
+         <pos>-0.12 0</pos>
+         <size>1 1</size>
+         <zIndex>2</zIndex>                 
+         <path>./_inc/systembackground/${system.theme}.jpg</path>
+      </image>   
+      <image name="logo2" extra="true">
+         <origin>0 1</origin>
+         <pos>0.05 0.92</pos>
+         <maxSize>0.5 0.2</maxSize>
+         <zIndex>2</zIndex>                 
+         <path>./_inc/logos/${system.theme}.png</path>
+      </image>  	  
+      <image name="carousel" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>3</zIndex>                 
+         <path>./_inc/images/carousel2.png</path>
+      </image>  	  
+      <text name="systemInfo">     
+         <pos>0.25 0.95</pos>
+         <backgroundColor>00000000</backgroundColor>
+         <color>ffffff</color>
+         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
+	     <fontSize>0.02</fontSize>
+         <zIndex>7</zIndex>	     
+      </text>            
+   </view>
+</feature>
+
+
+<!--
+On Screen help text
+-->
+
+    <view name="system, basic, detailed, grid, video">
+        <helpsystem name="help" boardModels="rk3328-ha8801">
+            <textColor>FFFFFFFF</textColor>
+            <iconColor>FFFFFFFF</iconColor>
+            <iconUpDown>./_inc/iconset/joystick_updown.svg</iconUpDown>
+            <iconLeftRight>./_inc/iconset/joystick_leftright.svg</iconLeftRight>
+            <iconUpDownLeftRight>./_inc/iconset/joystick_all.svg</iconUpDownLeftRight>
+            <iconA>./_inc/iconset/a_button.svg</iconA>
+            <iconB>./_inc/iconset/b_button.svg</iconB>
+            <iconX>./_inc/iconset/y_button.svg</iconX>
+            <iconY>./_inc/iconset/x_button.svg</iconY>
+            <iconStart>./_inc/iconset/p1_button.svg</iconStart>
+            <iconSelect>./_inc/iconset/rewind_button.svg</iconSelect>
+        </helpsystem>
+        <helpsystem name="help" boardModels="rk3328-ha8801" serialNos="8800*, 8801*, 8810*, 8819*">
+            <iconL>./_inc/iconset/c_button.svg</iconL>
+            <iconR>./_inc/iconset/z_button.svg</iconR>
+        </helpsystem>
+        <helpsystem name="help" boardModels="rk3328-ha8801" serialNos="2810*, 2811*, 2812*, B800*">
+            <iconL>./_inc/iconset/l1_button.svg</iconL>
+            <iconR>./_inc/iconset/r1_button.svg</iconR>
+        </helpsystem>
+    </view>
+   <view name="system">
+      <helpsystem name="help">
+         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
+         <fontSize>0.02</fontSize>     
+         <pos>0.02 0.964</pos>      
+         <textColor>ffffff</textColor>
+         <iconColor>ffffff</iconColor>
+      </helpsystem>
+   </view>  
+
+   <view name="detailed,video,grid">
+      <helpsystem name="help">
+         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
+         <fontSize>0.017</fontSize>     
+         <pos>0.02 0.964</pos>      
+         <textColor>ffffff</textColor>
+         <iconColor>ffffff</iconColor>
+      </helpsystem>
+   </view> 
+   <view name="basic">
+      <helpsystem name="help">
+         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
+         <fontSize>0.019</fontSize>     
+         <pos>0.02 0.964</pos>      
+         <textColor>ffffff</textColor>
+         <iconColor>ffffff</iconColor>
+      </helpsystem>
+   </view>      
+
+
+<!--
+Gamelist grid
+-->
+
+   <view name="grid"> 
+      <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount, md_rating, md_developer, md_publisher, md_genre, md_playcount, md_lastplayed">
+         <pos>1 1</pos>
+      </text>
+      <text name="md_lbl_rating,md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount,md_lbl_players,md_developer, md_publisher, md_genre, md_playcount, md_lastplayed,md_description,md_players,md_releasedate">
+         <color>ffffff</color>
+         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
+         <fontSize>0.02</fontSize>
+      </text>  
+	  <imagegrid name="gamegrid">
+            <pos>0.028 0</pos>
+            <size>0.12 1</size>
+            <margin>0 0</margin>
+            <autoLayout>1 15</autoLayout>
+            <animate>true</animate>
+            <scrollDirection>vertically</scrollDirection>
+            <centerSelection>true</centerSelection>
+			<cellsize>0.1 0.1</cellsize>
+            <scrollLoop>true</scrollLoop>
+			<gameImage>./_inc/images/empty.png</gameImage>
+			<folderImage>./_inc/images/folder.png</folderImage>
+			<autoLayoutSelectedZoom>1.5</autoLayoutSelectedZoom>
+			<zIndex>60</zIndex>
+            <imageSource>marquee</imageSource>			
+      </imagegrid>
+	  <gridtile name="default">
+            <backgroundColor>FFFFFF00</backgroundColor>
+            <backgroundCornerSize>9 9</backgroundCornerSize>
+            <padding>9 0</padding>
+            <textColor>505050FF</textColor>
+            <imageColor>FFFFFF55</imageColor>
+      </gridtile>
+      <gridtile name="selected">
+            <backgroundColor>3082ce00</backgroundColor>
+            <textColor>FFFFFFFF</textColor>
+            <imageColor>FFFFFFFF</imageColor>
+      </gridtile>
+      <text name="md_lbl_rating">
+         <pos>0.87 0.956</pos>
+         <size>0.14 0.035</size>
+         <color>C0C0C0</color>
+         <zIndex>43</zIndex>                 
+      </text>
+      <rating name="md_rating">
+         <zIndex>43</zIndex>       
+         <pos>0.915 0.962</pos>
+         <size>0.14 0.025</size>
+         <filledPath>./_inc/images/star_filled.png</filledPath>
+         <unfilledPath>./_inc/images/star_empty.png</unfilledPath>
+      </rating>
+      <text name="md_lbl_players">
+         <pos>2.01 0.87</pos>
+         <size>0.14 0.035</size>
+		 <color>C0C0C0</color>
+         <zIndex>43</zIndex>         
+      </text>
+      <text name="md_players">
+         <pos>2.055 0.87</pos>
+         <size>0.14 0.035</size>
+         <zIndex>43</zIndex>
+         <color>F3E804</color>                  
+      </text>
+      <text name="md_lbl_genre">
+         <pos>2.01 0.90</pos>
+         <size>0.14 0.035</size>
+         <color>C0C0C0</color>
+         <zIndex>43</zIndex>                   
+      </text>
+      <text name="md_genre">
+         <pos>2.055 0.90</pos>
+         <size>0.14 0.035</size>
+         <color>F3E804</color>         
+         <zIndex>43</zIndex>         
+      </text>              
+      <image name="logo">
+         <origin>0.0 0.0</origin>      
+         <pos>0.8 0.78</pos>
+         <maxSize>0.18 1</maxSize>
+      </image>   
+      <video name="md_video">
+         <origin>0.5 0.5</origin>
+         <pos>0.685 0.487</pos>
+         <size>0.53 0.7</size>
+		 <delay>1</delay>
+		 <showSnapshotNoVideo>true</showSnapshotNoVideo>
+         <showSnapshotDelay>true</showSnapshotDelay>
+         <zIndex>5</zIndex>               
+      </video> 
+      <image name="md_image">
+         <origin>0.5 0.5</origin>
+         <pos>0.685 0.487</pos>
+         <size>0.53 0.7</size>
+		 <default>./_inc/images/nopic2.png</default>
+         <zIndex>4</zIndex>        
+      </image>      
+      <image name="md_marquee">
+         <pos>0.66 0.1</pos>
+         <origin>0.5 0</origin>
+         <maxSize>0.3 0.2</maxSize>
+         <zIndex>80</zIndex>         
+      </image>
+	  <image name="nopic" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.685 0.487</pos>
+         <maxSize>0.6 1</maxSize>      
+         <path>./_inc/images/back.png</path>
+         <zIndex>1</zIndex>         
+      </image>  
+      <image name="frame" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/gamelist_grid.png</path>
+         <zIndex>10</zIndex>         
+      </image>  
+      <image name="frametop" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/gamelist_grid_top.png</path>
+         <zIndex>61</zIndex>         
+      </image> 
+      <image name="background3" extra="true">
+         <origin>0 0</origin>
+         <pos>0.1 0.05</pos>
+         <size>0.9 0.9</size>        
+         <path>./${system.theme}/_inc/character.png</path>
+         <zIndex>7</zIndex>         
+      </image>		  
+   </view> 
+<!--
+Gamelist basic
+--> 
+
+   <view name="basic">
+      <textlist name="gamelist">
+         <zIndex>43</zIndex>	      
+		 <selectorColor>295d8450</selectorColor>
+         <selectedColor>F3E804</selectedColor>      
+         <pos>0.548 0.15</pos>
+         <size>0.4 0.63</size>
+         <primaryColor>ffffff</primaryColor>
+         <secondaryColor>ffffff</secondaryColor>
+         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
+         <fontSize>0.02</fontSize>
+         <forceUppercase>1</forceUppercase>
+         <scrollSound>./_inc/sound/cursor.wav</scrollSound>	
+         <alignment>left</alignment>
+	     <horizontalMargin>0.021</horizontalMargin>         
+      </textlist>
+      <image name="background3" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./${system.theme}/_inc/character.png</path>
+         <zIndex>7</zIndex>         
+      </image>
+	  <image name="background4" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/backsw.png</path>
+         <zIndex>6</zIndex>         
+      </image>
+      <image name="border" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/border.png</path>
+         <zIndex>7</zIndex>         
+      </image>	  
+      <image name="logo">
+         <origin>0.0 0.0</origin>      
+         <pos>0.75 0.8</pos>
+         <maxSize>0.2 1</maxSize>
+      </image>
+	  
+   </view> 
+  
+  
+<!--
+Gamelist detailed & video
+--> 
+   <view name="detailed, video">
+      <text name="md_name, md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount, md_rating, md_developer, md_publisher, md_genre, md_playcount, md_lastplayed">
+         <pos>1 1</pos>
+      </text>
+      <text name="md_name, md_lbl_rating,md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount,md_lbl_players,md_developer, md_publisher, md_genre, md_playcount, md_lastplayed,md_description,md_players,md_releasedate">
+         <color>000000</color>
+         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
+         <fontSize>0.025</fontSize>
+      </text>
+	  <textlist name="gamelist">
+         <zIndex>43</zIndex>	      
+		 <selectorColor>295d8450</selectorColor>
+         <selectedColor>000080</selectedColor>    
+         <pos>0.015 0.22</pos>
+         <size>0.385 0.7</size>
+         <primaryColor>000000</primaryColor>
+         <secondaryColor>ff0000</secondaryColor>
+         <fontPath>./_inc/fonts/GROBOLD.ttf</fontPath>
+         <fontSize>0.02</fontSize>
+         <forceUppercase>1</forceUppercase>
+         <scrollSound>./_inc/sound/cursor.wav</scrollSound>	
+         <alignment>left</alignment>
+	     <horizontalMargin>0.021</horizontalMargin>         
+      </textlist>
+      <text name="md_lbl_rating">
+         <pos>0.45 0.682</pos>
+         <size>0.2 0.035</size>
+		 <fontSize>0.035</fontSize>
+         <zIndex>5</zIndex>                 
+      </text>
+      <rating name="md_rating">
+         <zIndex>5</zIndex>       
+         <pos>0.54 0.68</pos>
+         <size>0.2 0.04</size>
+         <filledPath>./_inc/images/star_filled.png</filledPath>
+         <unfilledPath>./_inc/images/star_empty.png</unfilledPath>
+      </rating>
+      <text name="md_lbl_players">
+         <pos>0.45 0.81</pos>
+         <size>0.1 0.035</size>
+         <zIndex>43</zIndex>         
+      </text>
+      <text name="md_players">
+         <pos>0.527 0.81</pos>
+         <size>0.14 0.035</size>
+         <zIndex>43</zIndex>
+         <color>000080</color>                  
+      </text>
+      <text name="md_lbl_releasedate">
+         <pos>0.45 0.85</pos>
+         <size>0.12 0.035</size>
+         <zIndex>43</zIndex>         
+      </text>
+      <datetime name="md_releasedate">
+         <pos>0.527 0.85</pos>
+         <size>0.14 0.035</size>
+         <zIndex>43</zIndex>
+         <color>000080</color>                  
+      </datetime>
+      <text name="md_lbl_genre">
+         <pos>0.45 0.90</pos>
+         <size>0.12 0.035</size>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_genre">
+         <pos>0.527 0.90</pos>
+         <size>0.4 0.035</size>
+         <color>000080</color>         
+         <zIndex>5</zIndex>         
+      </text>         
+      <text name="md_lbl_playcount">
+         <pos>0.45 0.77</pos>
+         <size>0.2 0.035</size>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_playcount">
+         <pos>0.527 0.77</pos>
+         <size>0.10 0.035</size>
+         <color>000080</color>         
+         <zIndex>5</zIndex>         
+      </text>
+      <text name="md_lbl_publisher">
+         <pos>0.66 0.81</pos>
+         <size>0.1 0.035</size>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_publisher">
+         <pos>0.745 0.81</pos>
+         <size>0.2 0.035</size>
+         <color>000080</color>         
+         <zIndex>5</zIndex>         
+      </text>
+      <text name="md_lbl_developer">
+         <pos>0.66 0.85</pos>
+         <size>0.1 0.035</size>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_developer">
+         <pos>0.745 0.85</pos>
+         <size>0.2 0.035</size>
+         <color>000080</color>         
+         <zIndex>5</zIndex>         
+      </text>
+      <text name="md_lbl_lastplayed">
+         <pos>0.66 0.77</pos>
+         <size>0.12 0.035</size>
+         <zIndex>43</zIndex>         
+      </text>
+      <datetime name="md_lastplayed">
+         <pos>0.745 0.77</pos>
+         <size>0.13 0.035</size>
+         <zIndex>43</zIndex>
+         <color>000080</color>                  
+      </datetime>                            
+      <text name="md_description">
+         <pos>0.78 0.22</pos>
+         <size>0.19 0.4</size>
+		 <fontSize>0.02</fontSize>
+         <alignment>left</alignment>   
+         <zIndex>5</zIndex>  
+         <color>ffffff</color>		 
+      </text>
+	     <text name="md_name">
+         <pos>0.025 0.025</pos>
+         <size>0.79 0.15</size>
+         <fontSize>0.06</fontSize>
+		 <alignment>left</alignment>  
+         <color>89CFF0</color>			 
+         <zIndex>10</zIndex>
+      </text>
+      <image name="logo2" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.89 0.7</pos>
+         <maxSize>0.15 0.08</maxSize>
+         <zIndex>2</zIndex>                 
+         <path>./_inc/logos/${system.theme}.png</path>
+      </image>   
+	  <image name="logo" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.918 0.106</pos>
+         <maxSize>0.12 0.2</maxSize>
+         <zIndex>2</zIndex>                 
+      </image> 
+      <video name="md_video">
+         <origin>0.5 0.5</origin>
+         <pos>0.583 0.42</pos>
+         <maxSize>0.32 0.41</maxSize>
+		 <delay>1</delay>
+		 <showSnapshotNoVideo>true</showSnapshotNoVideo>
+         <showSnapshotDelay>true</showSnapshotDelay>
+         <zIndex>7</zIndex>               
+      </video>  
+      <image name="md_image">
+         <origin>0.5 0.5</origin>
+         <pos>0.583 0.42</pos>
+         <maxSize>0.32 0.41</maxSize>
+		 <default>./_inc/images/nopic.png</default>
+         <zIndex>6</zIndex>     
+      </image>
+      <image name="background2" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0.02</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/menuDetailed.png</path>
+         <zIndex>1</zIndex>         
+      </image>
+	  <image name="background4" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/back.png</path>
+         <zIndex>0</zIndex>         
+      </image>		  
+   </view>
+   <view name="video">   
+         <text name="md_playcount">
+         <pos>0.547 0.77</pos>
+         <size>0.10 0.035</size>
+         <color>000080</color>         
+         <zIndex>5</zIndex>         
+      </text>
+   </view>  
+   
+</theme>
