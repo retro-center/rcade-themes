@@ -1,7 +1,7 @@
 <!--
 theme name:     HyperLite, a Hypermax port for RCADE
 creator:		Unreal2020 - but all credits go to the creators of Hypermax theme AND all art creators!
-version:        2.0BETA for ALU (all versions) with reduced/optimized images for ALU stock hardware or similar devices with RK3328
+version:        2.1BETA for ALU (all versions) with reduced/optimized images for ALU stock hardware or similar devices with RK3328, optimized video view for RCADE 2.0.5 or higher
 -->
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -217,9 +217,11 @@ Gamelist grid
          <origin>0.5 0.5</origin>
          <pos>0.685 0.487</pos>
          <size>0.53 0.7</size>
-		 <delay>1</delay>
-		 <showSnapshotNoVideo>true</showSnapshotNoVideo>
+		 <delay>0.5</delay>
+		 <showSnapshotNoVideo>false</showSnapshotNoVideo>
          <showSnapshotDelay>true</showSnapshotDelay>
+		 <createSnapshot>false</createSnapshot>
+		 <snapshotSource>image</snapshotSource>
          <zIndex>5</zIndex>               
       </video> 
       <image name="md_image">
@@ -464,9 +466,11 @@ Gamelist detailed & video
          <origin>0.5 0.5</origin>
          <pos>0.583 0.42</pos>
          <maxSize>0.32 0.41</maxSize>
-		 <delay>1</delay>
-		 <showSnapshotNoVideo>true</showSnapshotNoVideo>
+		 <delay>0.5</delay>
+		 <showSnapshotNoVideo>false</showSnapshotNoVideo>
          <showSnapshotDelay>true</showSnapshotDelay>
+		 <createSnapshot>false</createSnapshot>
+		 <snapshotSource>image</snapshotSource>
          <zIndex>7</zIndex>               
       </video>  
       <image name="md_image">
