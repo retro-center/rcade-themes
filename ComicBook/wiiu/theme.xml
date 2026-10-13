@@ -28,7 +28,7 @@
 			<origin>0.5 0.5</origin>
 		</image>
 		<image name="classic_logo" extra="true">
-			<path>./art/system 3.png</path>
+			<path>./art/system3.png</path>
 			<pos>0.75 0.121</pos>
 			<maxSize>0.26 0.1</maxSize>
 			<origin>0.5 0.5</origin>
