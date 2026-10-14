@@ -41,7 +41,7 @@
 			<origin>0.5 0.5</origin>
 		</image>
 		<image name="comic_rip" extra="true">
-			<path>./../art/rip/sega CD.png</path>
+			<path>./../art/rip/segaCD.png</path>
 			<pos>0.918 0.29</pos>
 			<maxSize>0.32 0.32</maxSize>
 			<origin>0.5 0.5</origin>
